@@ -5,6 +5,11 @@ public class WeatherData {
     /** Guaranteed not to be null and to contain only non-null entries */
     private ArrayList<Double> temperatures;
 
+    public WeatherData(ArrayList<Double> temps)
+    {
+        temps = temperatures;
+    }
+
     /**
     * Cleans the data by removing from temperatures all values that are less than
     * lower and all values that are greater than upper, as described in part (a)
