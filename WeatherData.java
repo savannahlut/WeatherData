@@ -7,7 +7,7 @@ public class WeatherData {
 
     public WeatherData(ArrayList<Double> temps)
     {
-        temps = temperatures;
+        temperatures = temps;
     }
 
     /**
@@ -28,7 +28,18 @@ public class WeatherData {
     * Precondition: There is at least one heat wave in temperatures based on threshold.
     */
     public int longestHeatWave(double threshold)
-    { /* to be implemented in part (b) */ }
-    // There may be instance variables, constructors, and methods that are not shown.
+    { 
+        int row = 0;
+        int longest = 0;
+        for (int i = 0; i < temperatures.size(); i++)
+        {
+            if (temperatures.get(i) > threshold)
+            {
+                row++ ;
+                if (row > longest) longest = row;
+            } else row = 0;
+        } 
+        return longest; 
+    }
 
 }

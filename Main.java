@@ -12,5 +12,12 @@ public class Main
         System.out.println(temps);
         michigan.cleanData(85.0, 120.0);
         System.out.println(temps);
+
+        ArrayList<Double> hola = new ArrayList<Double>();
+        double[] clima = {};
+        for(double n : clima) hola.add(n); 
+        WeatherData puertoRico = new WeatherData(temps);
+        System.out.println(hola);
+        System.out.println(puertoRico.longestHeatWave(100.5));
     }
 }
