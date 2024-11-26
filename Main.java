@@ -14,10 +14,11 @@ public class Main
         System.out.println(temps);
 
         ArrayList<Double> hola = new ArrayList<Double>();
-        double[] clima = {};
-        for(double n : clima) hola.add(n); 
-        WeatherData puertoRico = new WeatherData(temps);
+        double[] clima = {100.5, 98.5, 102, 103.9, 87.5, 105.2, 90.3, 94.8, 109.1, 102.1, 107.4, 93.2};
+        for(double m : clima) hola.add(m); 
+        WeatherData puertoRico = new WeatherData(hola);
         System.out.println(hola);
         System.out.println(puertoRico.longestHeatWave(100.5));
+        System.out.println(puertoRico.longestHeatWave(95.2));
     }
 }
